@@ -1,0 +1,99 @@
+.header {
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "hdr . navbtn1 navbtn2";
+}
+
+.container {
+    max-width: 750px;
+    display: grid;
+    grid-row-gap: 3%;
+    grid-template-columns: 4fr 1fr 4fr 1fr 4fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "itm1 . itm6 . itm11"
+        "itm2 . itm7 . itm12"
+        "itm3 . itm8 . itm13"
+        "itm4 . itm9 . itm14"
+        "itm5 . itm10 . itm15";
+}
+
+.itemcontainer {
+    max-width: 150px;
+    margin-top: 2%;
+    padding: 1%;
+    outline-width: 2px;
+    outline-style: ridge;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 5fr 3fr 5fr;
+    grid-template-areas:
+        "item button"
+        ". button"
+        "price button";
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.cartcontainer {
+    max-width: 190px;
+    margin-top: 2%;
+    padding: 1%;
+    outline-width: 2px;
+    outline-style: ridge;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 5fr 3fr 3fr 5fr;
+    grid-template-areas:
+        "item button1 ."
+        "amount button1 button3"
+        "amount button2 button3"
+        "price button2 .";
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+.item {
+    grid-area: item;
+    align-items: left;
+}
+
+.price {
+    grid-area: price;
+    align-items: left;
+}
+
+.amount {
+    grid-area: amount;
+    align-items: left;
+}
+
+.button {
+    grid-area: button;
+}
+
+.button1 {
+    grid-area: button1;
+    align-items: right;
+}
+
+.button2 {
+    grid-area: button2;
+    align-items: right;
+}
+.button3 {
+    grid-area: button3;
+    align-items: right;
+}
+.text {
+    grid-area: hdr;
+}
+.navbtn1 {
+    grid-area: navbtn1;
+    align-self: right;
+}
+.navbtn2 {
+    grid-area: navbtn2;
+    align-self: right;
+}
